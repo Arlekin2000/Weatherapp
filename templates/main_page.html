@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+   li {
+    list-style-type: none;
+   }
+  </style>
+</head>
+<body>
+<h1 align="center">Погода в городе</h1>
+<form action="/get_weather" method="post" align="center">
+  <label>
+    Введите город:
+    <input type="text" id="city" name="city" />
+  </label>
+  <input type="submit" />
+</form>
+<h2 align="center">{{city}}</h2>
+<h2 align="center">{{date}}</h2>
+<h2 align="center">{{time}}</h2>
+<h2 align="center">Температура <br> {{temperature}}</h2>
+<h2 align="center">Скорость ветра <br> {{wind}}</h2>
+<ul>{% for i in range(24)%}
+    <li><h3>{{ hourly["time"][i].split("T")[1]}} {{hourly["temperature_2m"][i]}} {{hourly["wind_speed_10m"][i]}}</h3></li>
+{% endfor%}
+</ul>
+</body>
+</html>
