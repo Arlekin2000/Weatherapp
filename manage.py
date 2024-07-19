@@ -1,7 +1,7 @@
 import argparse
 
-from main import app, db
-from models import User, City, UserHistory
+from app.main import app
+from app.models import User, City, UserHistory, db
 
 
 def args_parser():

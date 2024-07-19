@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/login" method="post">
+  <div class="container">
+    <h1>Авторизация</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Введите email" name="email" id="email" required>
+
+    <label for="password"><b>Пароль</b></label>
+    <input type="password" placeholder="Введите пароль" name="password" id="password" required>
+    <hr>
+
+    <p>Нет аккаунта?</p> <a href="/register">Зарегистрироваться</a>
+    <hr>
+
+    <button type="submit" class="registerbtn">Войти</button>
+  </div>
+</form>
+
+</body>
+</html>
